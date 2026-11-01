@@ -1,0 +1,156 @@
+{
+  "description": "NEVER_RAN_AWAITING_APPROVAL. Five workflow runs created 2026-11-01 and parked for maintainer approval. Note the observed shape: status=completed with conclusion=action_required, and zero jobs. created_at equals updated_at, so the expiry gap test does not fire.",
+  "provenance": "Workflow run, job and check run payloads recorded verbatim from the live GitHub REST API on 2026-11-01 against the public repository NVIDIA/garak (query: actions/runs?status=action_required). The enclosing pull request object is synthetic, numbered 9001, because the head commit is not resolvable to a pull request with a read only token; only the head SHA it carries is real. Payloads trimmed and transcoded to ASCII.",
+  "responses": {
+    "repos/NVIDIA/garak/actions/runs/41298083158/jobs": {
+      "jobs": [],
+      "total_count": 0
+    },
+    "repos/NVIDIA/garak/actions/runs/41298083159/jobs": {
+      "jobs": [],
+      "total_count": 0
+    },
+    "repos/NVIDIA/garak/actions/runs/41298083164/jobs": {
+      "jobs": [],
+      "total_count": 0
+    },
+    "repos/NVIDIA/garak/actions/runs/41298083178/jobs": {
+      "jobs": [],
+      "total_count": 0
+    },
+    "repos/NVIDIA/garak/actions/runs/41298083185/jobs": {
+      "jobs": [],
+      "total_count": 0
+    },
+    "repos/NVIDIA/garak/actions/runs?head_sha=7665deabb071cae9434775c49338286813306d08": {
+      "total_count": 5,
+      "workflow_runs": [
+        {
+          "conclusion": "action_required",
+          "created_at": "2026-11-01T10:34:26Z",
+          "event": "pull_request",
+          "head_branch": "fix/plugin-provider-store-race",
+          "head_sha": "7665deabb071cae9434775c49338286813306d08",
+          "html_url": "https://github.com/NVIDIA/garak/actions/runs/41298083159",
+          "id": 41298083159,
+          "name": "Garak pytest - Windows",
+          "node_id": "WFR_kwLOJhfZ-s8AAAAJnY69Vw",
+          "path": ".github/workflows/test_windows.yml",
+          "run_attempt": 1,
+          "run_number": 4068,
+          "run_started_at": "2026-11-01T10:34:26Z",
+          "status": "completed",
+          "updated_at": "2026-11-01T10:34:26Z",
+          "workflow_id": 95570119
+        },
+        {
+          "conclusion": "action_required",
+          "created_at": "2026-11-01T10:34:26Z",
+          "event": "pull_request",
+          "head_branch": "fix/plugin-provider-store-race",
+          "head_sha": "7665deabb071cae9434775c49338286813306d08",
+          "html_url": "https://github.com/NVIDIA/garak/actions/runs/41298083185",
+          "id": 41298083185,
+          "name": "Documentation build",
+          "node_id": "WFR_kwLOJhfZ-s8AAAAJnY69cQ",
+          "path": ".github/workflows/docs.yml",
+          "run_attempt": 1,
+          "run_number": 1252,
+          "run_started_at": "2026-11-01T10:34:26Z",
+          "status": "completed",
+          "updated_at": "2026-11-01T10:34:26Z",
+          "workflow_id": 265472938
+        },
+        {
+          "conclusion": "action_required",
+          "created_at": "2026-11-01T10:34:26Z",
+          "event": "pull_request",
+          "head_branch": "fix/plugin-provider-store-race",
+          "head_sha": "7665deabb071cae9434775c49338286813306d08",
+          "html_url": "https://github.com/NVIDIA/garak/actions/runs/41298083164",
+          "id": 41298083164,
+          "name": "Garak pytest - Linux",
+          "node_id": "WFR_kwLOJhfZ-s8AAAAJnY69XA",
+          "path": ".github/workflows/test_linux.yml",
+          "run_attempt": 1,
+          "run_number": 4064,
+          "run_started_at": "2026-11-01T10:34:26Z",
+          "status": "completed",
+          "updated_at": "2026-11-01T10:34:26Z",
+          "workflow_id": 107904213
+        },
+        {
+          "conclusion": "action_required",
+          "created_at": "2026-11-01T10:34:26Z",
+          "event": "pull_request",
+          "head_branch": "fix/plugin-provider-store-race",
+          "head_sha": "7665deabb071cae9434775c49338286813306d08",
+          "html_url": "https://github.com/NVIDIA/garak/actions/runs/41298083178",
+          "id": 41298083178,
+          "name": "Garak pip - install from repo",
+          "node_id": "WFR_kwLOJhfZ-s8AAAAJnY69ag",
+          "path": ".github/workflows/remote_package_install.yml",
+          "run_attempt": 1,
+          "run_number": 3454,
+          "run_started_at": "2026-11-01T10:34:26Z",
+          "status": "completed",
+          "updated_at": "2026-11-01T10:34:26Z",
+          "workflow_id": 127609481
+        },
+        {
+          "conclusion": "action_required",
+          "created_at": "2026-11-01T10:34:26Z",
+          "event": "pull_request",
+          "head_branch": "fix/plugin-provider-store-race",
+          "head_sha": "7665deabb071cae9434775c49338286813306d08",
+          "html_url": "https://github.com/NVIDIA/garak/actions/runs/41298083158",
+          "id": 41298083158,
+          "name": "Garak pytest - MacOS",
+          "node_id": "WFR_kwLOJhfZ-s8AAAAJnY69Vg",
+          "path": ".github/workflows/test_macos.yml",
+          "run_attempt": 1,
+          "run_number": 4069,
+          "run_started_at": "2026-11-01T10:34:26Z",
+          "status": "completed",
+          "updated_at": "2026-11-01T10:34:26Z",
+          "workflow_id": 95629690
+        }
+      ]
+    },
+    "repos/NVIDIA/garak/commits/7665deabb071cae9434775c49338286813306d08/check-runs": {
+      "check_runs": [
+        {
+          "app": {
+            "name": "DCO"
+          },
+          "completed_at": "2026-11-01T10:34:25Z",
+          "conclusion": "success",
+          "details_url": "https://probot.github.io/apps/dco/",
+          "head_sha": "7665deabb071cae9434775c49338286813306d08",
+          "id": 124823069118,
+          "name": "DCO",
+          "started_at": "2026-11-01T10:34:25Z",
+          "status": "completed"
+        }
+      ],
+      "total_count": 1
+    },
+    "repos/NVIDIA/garak/pulls/9001": {
+      "base": {
+        "ref": "main"
+      },
+      "draft": false,
+      "head": {
+        "ref": "example-branch",
+        "sha": "7665deabb071cae9434775c49338286813306d08"
+      },
+      "html_url": "https://github.com/NVIDIA/garak/pull/9001",
+      "number": 9001,
+      "state": "open",
+      "title": "example pull request from an unapproved contributor",
+      "user": {
+        "login": "example-contributor"
+      }
+    }
+  }
+}

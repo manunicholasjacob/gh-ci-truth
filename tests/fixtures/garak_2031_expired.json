@@ -1,0 +1,158 @@
+{
+  "description": "NEVER_RAN_EXPIRED. Five workflow runs created 2026-08-28, expired 2026-09-27 after 30 days without maintainer approval. Each reports status=completed, conclusion=failure and zero jobs, so none attaches a check run. The only check run on the head commit is a passing DCO check, so the checks panel reads as clean.",
+  "provenance": "Recorded from the live GitHub REST API on 2026-11-01 against the public repository NVIDIA/garak. Pull request 2031 was opened by the author of this tool, manunicholasjacob. Payloads are trimmed to the fields the classifier reads and transcoded to ASCII; no values were altered.",
+  "responses": {
+    "repos/NVIDIA/garak/actions/runs/33132180993/jobs": {
+      "jobs": [],
+      "total_count": 0
+    },
+    "repos/NVIDIA/garak/actions/runs/33132181001/jobs": {
+      "jobs": [],
+      "total_count": 0
+    },
+    "repos/NVIDIA/garak/actions/runs/33132181002/jobs": {
+      "jobs": [],
+      "total_count": 0
+    },
+    "repos/NVIDIA/garak/actions/runs/33132181024/jobs": {
+      "jobs": [],
+      "total_count": 0
+    },
+    "repos/NVIDIA/garak/actions/runs/33132181088/jobs": {
+      "jobs": [],
+      "total_count": 0
+    },
+    "repos/NVIDIA/garak/actions/runs?head_sha=4b3e3374cf8355388460e99f055314209d73089e": {
+      "total_count": 5,
+      "workflow_runs": [
+        {
+          "conclusion": "failure",
+          "created_at": "2026-08-28T01:13:15Z",
+          "event": "pull_request",
+          "head_branch": "fix/count-tokens-prompt-length",
+          "head_sha": "4b3e3374cf8355388460e99f055314209d73089e",
+          "html_url": "https://github.com/NVIDIA/garak/actions/runs/33132180993",
+          "id": 33132180993,
+          "name": "Garak pytest - MacOS",
+          "node_id": "WFR_kwLOJhfZ-s8AAAAHttT2AQ",
+          "path": ".github/workflows/test_macos.yml",
+          "run_attempt": 1,
+          "run_number": 3662,
+          "run_started_at": "2026-08-28T01:13:15Z",
+          "status": "completed",
+          "updated_at": "2026-09-27T01:17:20Z",
+          "workflow_id": 95629690
+        },
+        {
+          "conclusion": "failure",
+          "created_at": "2026-08-28T01:13:15Z",
+          "event": "pull_request",
+          "head_branch": "fix/count-tokens-prompt-length",
+          "head_sha": "4b3e3374cf8355388460e99f055314209d73089e",
+          "html_url": "https://github.com/NVIDIA/garak/actions/runs/33132181002",
+          "id": 33132181002,
+          "name": "Garak pip - install from repo",
+          "node_id": "WFR_kwLOJhfZ-s8AAAAHttT2Cg",
+          "path": ".github/workflows/remote_package_install.yml",
+          "run_attempt": 1,
+          "run_number": 3047,
+          "run_started_at": "2026-08-28T01:13:15Z",
+          "status": "completed",
+          "updated_at": "2026-09-27T01:17:20Z",
+          "workflow_id": 127609481
+        },
+        {
+          "conclusion": "failure",
+          "created_at": "2026-08-28T01:13:15Z",
+          "event": "pull_request",
+          "head_branch": "fix/count-tokens-prompt-length",
+          "head_sha": "4b3e3374cf8355388460e99f055314209d73089e",
+          "html_url": "https://github.com/NVIDIA/garak/actions/runs/33132181088",
+          "id": 33132181088,
+          "name": "Garak pytest - Linux",
+          "node_id": "WFR_kwLOJhfZ-s8AAAAHttT2YA",
+          "path": ".github/workflows/test_linux.yml",
+          "run_attempt": 1,
+          "run_number": 3657,
+          "run_started_at": "2026-08-28T01:13:15Z",
+          "status": "completed",
+          "updated_at": "2026-09-27T01:17:20Z",
+          "workflow_id": 107904213
+        },
+        {
+          "conclusion": "failure",
+          "created_at": "2026-08-28T01:13:15Z",
+          "event": "pull_request",
+          "head_branch": "fix/count-tokens-prompt-length",
+          "head_sha": "4b3e3374cf8355388460e99f055314209d73089e",
+          "html_url": "https://github.com/NVIDIA/garak/actions/runs/33132181024",
+          "id": 33132181024,
+          "name": "Garak pytest - Windows",
+          "node_id": "WFR_kwLOJhfZ-s8AAAAHttT2IA",
+          "path": ".github/workflows/test_windows.yml",
+          "run_attempt": 1,
+          "run_number": 3661,
+          "run_started_at": "2026-08-28T01:13:15Z",
+          "status": "completed",
+          "updated_at": "2026-09-27T01:17:20Z",
+          "workflow_id": 95570119
+        },
+        {
+          "conclusion": "failure",
+          "created_at": "2026-08-28T01:13:15Z",
+          "event": "pull_request",
+          "head_branch": "fix/count-tokens-prompt-length",
+          "head_sha": "4b3e3374cf8355388460e99f055314209d73089e",
+          "html_url": "https://github.com/NVIDIA/garak/actions/runs/33132181001",
+          "id": 33132181001,
+          "name": "Documentation build",
+          "node_id": "WFR_kwLOJhfZ-s8AAAAHttT2CQ",
+          "path": ".github/workflows/docs.yml",
+          "run_attempt": 1,
+          "run_number": 845,
+          "run_started_at": "2026-08-28T01:13:15Z",
+          "status": "completed",
+          "updated_at": "2026-09-27T01:17:20Z",
+          "workflow_id": 265472938
+        }
+      ]
+    },
+    "repos/NVIDIA/garak/commits/4b3e3374cf8355388460e99f055314209d73089e/check-runs": {
+      "check_runs": [
+        {
+          "app": {
+            "name": "DCO"
+          },
+          "completed_at": "2026-08-28T01:13:13Z",
+          "conclusion": "success",
+          "details_url": "https://probot.github.io/apps/dco/",
+          "head_sha": "4b3e3374cf8355388460e99f055314209d73089e",
+          "id": 98723992378,
+          "name": "DCO",
+          "started_at": "2026-08-28T01:13:12Z",
+          "status": "completed"
+        }
+      ],
+      "total_count": 1
+    },
+    "repos/NVIDIA/garak/pulls/2031": {
+      "base": {
+        "ref": "main"
+      },
+      "draft": false,
+      "head": {
+        "ref": "fix/count-tokens-prompt-length",
+        "sha": "4b3e3374cf8355388460e99f055314209d73089e"
+      },
+      "html_url": "https://github.com/NVIDIA/garak/pull/2031",
+      "mergeable": true,
+      "mergeable_state": "clean",
+      "number": 2031,
+      "state": "open",
+      "title": "fix(analyze): count prompt characters, not dict length, in count_tokens",
+      "user": {
+        "login": "manunicholasjacob"
+      }
+    }
+  }
+}

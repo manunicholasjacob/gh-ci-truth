@@ -1,0 +1,147 @@
+{
+  "description": "Two open pull requests in one repository, one tested and failing and one never tested, for exercising the --all-open and --strict code paths.",
+  "provenance": "Synthetic. Field names, types and value vocabulary are copied from the payloads recorded live from NVIDIA/garak on 2026-11-01; the values are invented because no public example of this state was to hand. Nothing here is presented as an observation.",
+  "responses": {
+    "repos/example-org/example-repo/actions/runs/2001/jobs": {
+      "jobs": [
+        {
+          "conclusion": "success",
+          "id": 900,
+          "name": "build (ubuntu-latest, 3.12)",
+          "status": "completed"
+        }
+      ],
+      "total_count": 1
+    },
+    "repos/example-org/example-repo/actions/runs/2201/jobs": {
+      "jobs": [],
+      "total_count": 0
+    },
+    "repos/example-org/example-repo/actions/runs?head_sha=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa": {
+      "total_count": 1,
+      "workflow_runs": [
+        {
+          "conclusion": "failure",
+          "created_at": "2026-10-20T10:00:00Z",
+          "event": "pull_request",
+          "head_branch": "feature-branch",
+          "head_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "html_url": "https://github.com/example-org/example-repo/actions/runs/2001",
+          "id": 2001,
+          "name": "pytest - Linux",
+          "node_id": "WFR_synthetic_2001",
+          "path": ".github/workflows/test_linux.yml",
+          "run_attempt": 1,
+          "run_number": 1,
+          "run_started_at": "2026-10-20T10:00:00Z",
+          "status": "completed",
+          "updated_at": "2026-10-20T10:12:40Z",
+          "workflow_id": 101
+        }
+      ]
+    },
+    "repos/example-org/example-repo/actions/runs?head_sha=cccccccccccccccccccccccccccccccccccccccc": {
+      "total_count": 1,
+      "workflow_runs": [
+        {
+          "conclusion": "failure",
+          "created_at": "2026-08-28T01:13:15Z",
+          "event": "pull_request",
+          "head_branch": "feature-branch",
+          "head_sha": "cccccccccccccccccccccccccccccccccccccccc",
+          "html_url": "https://github.com/example-org/example-repo/actions/runs/2201",
+          "id": 2201,
+          "name": "pytest - Linux",
+          "node_id": "WFR_synthetic_2201",
+          "path": ".github/workflows/test_linux.yml",
+          "run_attempt": 1,
+          "run_number": 1,
+          "run_started_at": "2026-08-28T01:13:15Z",
+          "status": "completed",
+          "updated_at": "2026-09-27T01:17:20Z",
+          "workflow_id": 101
+        }
+      ]
+    },
+    "repos/example-org/example-repo/commits/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/check-runs": {
+      "check_runs": [
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-20T10:12:40Z",
+          "conclusion": "failure",
+          "details_url": "",
+          "head_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "id": 31,
+          "name": "build (ubuntu-latest, 3.12)",
+          "started_at": "2026-10-20T10:00:10Z",
+          "status": "completed"
+        }
+      ],
+      "total_count": 1
+    },
+    "repos/example-org/example-repo/commits/cccccccccccccccccccccccccccccccccccccccc/check-runs": {
+      "check_runs": [
+        {
+          "app": {
+            "name": "DCO"
+          },
+          "completed_at": "2026-08-28T01:13:13Z",
+          "conclusion": "success",
+          "details_url": "https://probot.github.io/apps/dco/",
+          "head_sha": "cccccccccccccccccccccccccccccccccccccccc",
+          "id": 51,
+          "name": "DCO",
+          "started_at": "2026-08-28T01:13:12Z",
+          "status": "completed"
+        }
+      ],
+      "total_count": 1
+    },
+    "repos/example-org/example-repo/pulls/11": {
+      "base": {
+        "ref": "main"
+      },
+      "draft": false,
+      "head": {
+        "ref": "feature-branch",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "html_url": "https://github.com/example-org/example-repo/pull/11",
+      "number": 11,
+      "state": "open",
+      "title": "a change that breaks a test",
+      "user": {
+        "login": "example-contributor"
+      }
+    },
+    "repos/example-org/example-repo/pulls/12": {
+      "base": {
+        "ref": "main"
+      },
+      "draft": false,
+      "head": {
+        "ref": "feature-branch",
+        "sha": "cccccccccccccccccccccccccccccccccccccccc"
+      },
+      "html_url": "https://github.com/example-org/example-repo/pull/12",
+      "number": 12,
+      "state": "open",
+      "title": "an unapproved contributor's change",
+      "user": {
+        "login": "example-contributor"
+      }
+    },
+    "repos/example-org/example-repo/pulls?state=open&sort=updated&direction=desc": [
+      {
+        "number": 11,
+        "title": "a change that breaks a test"
+      },
+      {
+        "number": 12,
+        "title": "a change to a repository with no CI"
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# gh ci-truth: the gh CLI extension entry point.
+#
+# gh runs this file when the extension is invoked. It is a thin shim: all
+# of the logic lives in the gh_ci_truth Python package next to it, so the
+# same classifier serves the extension, the importable library and the
+# GitHub Action without a second implementation to keep in step.
+#
+# Requires Python 3.9 or newer on PATH. No third party packages.
+set -euo pipefail
+
+here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+python_bin=""
+for candidate in python3 python py; do
+  if command -v "$candidate" >/dev/null 2>&1; then
+    if "$candidate" -c 'import sys; sys.exit(0 if sys.version_info >= (3, 9) else 1)' >/dev/null 2>&1; then
+      python_bin="$candidate"
+      break
+    fi
+  fi
+done
+
+if [ -z "$python_bin" ]; then
+  echo "gh-ci-truth: needs Python 3.9 or newer on PATH" >&2
+  echo "gh-ci-truth: install it from https://www.python.org/downloads/" >&2
+  exit 3
+fi
+
+# Prefer the copy that shipped with the extension, so the extension works
+# whether or not the library is also pip installed.
+if [ -d "$here/src/gh_ci_truth" ]; then
+  export PYTHONPATH="$here/src${PYTHONPATH:+:$PYTHONPATH}"
+elif [ -d "$here/gh_ci_truth" ]; then
+  export PYTHONPATH="$here${PYTHONPATH:+:$PYTHONPATH}"
+fi
+
+exec "$python_bin" -m gh_ci_truth "$@"

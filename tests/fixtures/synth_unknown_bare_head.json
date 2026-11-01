@@ -1,0 +1,60 @@
+{
+  "description": "UNKNOWN. No run exists for the head commit, the pull request has no older commit with results, and the repository does have workflows that run on pull requests. A path or branch filter is the likely explanation, but the evidence does not establish it, so the tool says so rather than guessing.",
+  "provenance": "Synthetic. Field names, types and value vocabulary are copied from the payloads recorded live from NVIDIA/garak on 2026-11-01; the values are invented because no public example of this state was to hand. Nothing here is presented as an observation.",
+  "responses": {
+    "repos/example-org/example-repo/actions/runs?event=pull_request&per_page=1": {
+      "total_count": 4821,
+      "workflow_runs": []
+    },
+    "repos/example-org/example-repo/actions/runs?head_sha=bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb": {
+      "total_count": 0,
+      "workflow_runs": []
+    },
+    "repos/example-org/example-repo/actions/workflows": {
+      "total_count": 2,
+      "workflows": [
+        {
+          "id": 101,
+          "name": "pytest - Linux",
+          "path": ".github/workflows/test_linux.yml",
+          "state": "active"
+        },
+        {
+          "id": 102,
+          "name": "Documentation build",
+          "path": ".github/workflows/docs.yml",
+          "state": "active"
+        }
+      ]
+    },
+    "repos/example-org/example-repo/commits/bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb/check-runs": {
+      "check_runs": [],
+      "total_count": 0
+    },
+    "repos/example-org/example-repo/pulls/14": {
+      "base": {
+        "ref": "main"
+      },
+      "draft": false,
+      "head": {
+        "ref": "feature-branch",
+        "sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "html_url": "https://github.com/example-org/example-repo/pull/14",
+      "number": 14,
+      "state": "open",
+      "title": "a documentation only change",
+      "user": {
+        "login": "example-contributor"
+      }
+    },
+    "repos/example-org/example-repo/pulls/14/commits": [
+      {
+        "commit": {
+          "message": "the only commit"
+        },
+        "sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      }
+    ]
+  }
+}

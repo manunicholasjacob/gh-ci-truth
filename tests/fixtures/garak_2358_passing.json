@@ -1,0 +1,604 @@
+{
+  "description": "TESTED_PASSING. Six workflow runs on the head commit, all completed successfully with jobs that actually executed, and 23 check runs attached to the head commit.",
+  "provenance": "Recorded from the live GitHub REST API on 2026-11-01 against the public repository NVIDIA/garak. Pull request 2358 is a third party pull request used only as an example of the passing shape. Payloads trimmed and transcoded to ASCII.",
+  "responses": {
+    "repos/NVIDIA/garak/actions/runs/39976890274/jobs": {
+      "jobs": [
+        {
+          "conclusion": "success",
+          "id": 120493709754,
+          "name": "build (3.11)",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "id": 120493710114,
+          "name": "build (3.14)",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "id": 120493710123,
+          "name": "build (3.12)",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "id": 120493710210,
+          "name": "build (3.13)",
+          "status": "completed"
+        }
+      ],
+      "total_count": 4
+    },
+    "repos/NVIDIA/garak/actions/runs/39976890305/jobs": {
+      "jobs": [
+        {
+          "conclusion": "success",
+          "id": 120493709593,
+          "name": "docs",
+          "status": "completed"
+        }
+      ],
+      "total_count": 1
+    },
+    "repos/NVIDIA/garak/actions/runs/39976890337/jobs": {
+      "jobs": [
+        {
+          "conclusion": "success",
+          "id": 120493709374,
+          "name": "build_windows (3.14)",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "id": 120493709761,
+          "name": "build_windows (3.13)",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "id": 120493709796,
+          "name": "build_windows (3.11)",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "id": 120493709867,
+          "name": "build_windows (3.12)",
+          "status": "completed"
+        }
+      ],
+      "total_count": 4
+    },
+    "repos/NVIDIA/garak/actions/runs/39976890343/jobs": {
+      "jobs": [
+        {
+          "conclusion": "success",
+          "id": 120493709229,
+          "name": "build_macos (3.14)",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "id": 120493709466,
+          "name": "build_macos (3.11)",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "id": 120493709641,
+          "name": "build_macos (3.13)",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "id": 120493709778,
+          "name": "build_macos (3.12)",
+          "status": "completed"
+        }
+      ],
+      "total_count": 4
+    },
+    "repos/NVIDIA/garak/actions/runs/39976890427/jobs": {
+      "jobs": [
+        {
+          "conclusion": "success",
+          "id": 120555904184,
+          "name": "build (ubuntu-latest, 3.14)",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "id": 120555904498,
+          "name": "build (ubuntu-latest, 3.12)",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "id": 120555904547,
+          "name": "build (ubuntu-24.04-arm, 3.12)",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "id": 120555904553,
+          "name": "build (ubuntu-24.04-arm, 3.14)",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "id": 120555904591,
+          "name": "build (ubuntu-latest, 3.13)",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "id": 120555904630,
+          "name": "build (ubuntu-latest, 3.11)",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "id": 120555904749,
+          "name": "build (ubuntu-24.04-arm, 3.13)",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "id": 120555906850,
+          "name": "build (ubuntu-24.04-arm, 3.11)",
+          "status": "completed"
+        }
+      ],
+      "total_count": 8
+    },
+    "repos/NVIDIA/garak/actions/runs/39998500346/jobs": {
+      "jobs": [
+        {
+          "conclusion": "success",
+          "id": 120568178235,
+          "name": "handle-labels",
+          "status": "completed"
+        }
+      ],
+      "total_count": 1
+    },
+    "repos/NVIDIA/garak/actions/runs?head_sha=343fba1a0a885e7f95f0ab330a8cb22bb7287e5d": {
+      "total_count": 6,
+      "workflow_runs": [
+        {
+          "conclusion": "success",
+          "created_at": "2026-10-23T17:51:24Z",
+          "event": "pull_request_target",
+          "head_branch": "feat/probe-intent-extraction",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "html_url": "https://github.com/NVIDIA/garak/actions/runs/39998500346",
+          "id": 39998500346,
+          "name": "Labels",
+          "node_id": "WFR_kwLOJhfZ-s8AAAAJUBit-g",
+          "path": ".github/workflows/labels.yml",
+          "run_attempt": 1,
+          "run_number": 1311,
+          "run_started_at": "2026-10-23T17:51:24Z",
+          "status": "completed",
+          "updated_at": "2026-10-23T17:51:30Z",
+          "workflow_id": 116823289
+        },
+        {
+          "conclusion": "success",
+          "created_at": "2026-10-23T15:16:44Z",
+          "event": "pull_request",
+          "head_branch": "feat/probe-intent-extraction",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "html_url": "https://github.com/NVIDIA/garak/actions/runs/39976890274",
+          "id": 39976890274,
+          "name": "Garak pip - install from repo",
+          "node_id": "WFR_kwLOJhfZ-s8AAAAJTs7vog",
+          "path": ".github/workflows/remote_package_install.yml",
+          "run_attempt": 1,
+          "run_number": 3408,
+          "run_started_at": "2026-10-23T15:16:44Z",
+          "status": "completed",
+          "updated_at": "2026-10-23T15:19:11Z",
+          "workflow_id": 127609481
+        },
+        {
+          "conclusion": "success",
+          "created_at": "2026-10-23T15:16:44Z",
+          "event": "pull_request",
+          "head_branch": "feat/probe-intent-extraction",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "html_url": "https://github.com/NVIDIA/garak/actions/runs/39976890305",
+          "id": 39976890305,
+          "name": "Documentation build",
+          "node_id": "WFR_kwLOJhfZ-s8AAAAJTs7vwQ",
+          "path": ".github/workflows/docs.yml",
+          "run_attempt": 1,
+          "run_number": 1206,
+          "run_started_at": "2026-10-23T15:16:44Z",
+          "status": "completed",
+          "updated_at": "2026-10-23T15:19:39Z",
+          "workflow_id": 265472938
+        },
+        {
+          "conclusion": "success",
+          "created_at": "2026-10-23T15:16:44Z",
+          "event": "pull_request",
+          "head_branch": "feat/probe-intent-extraction",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "html_url": "https://github.com/NVIDIA/garak/actions/runs/39976890343",
+          "id": 39976890343,
+          "name": "Garak pytest - MacOS",
+          "node_id": "WFR_kwLOJhfZ-s8AAAAJTs7v5w",
+          "path": ".github/workflows/test_macos.yml",
+          "run_attempt": 1,
+          "run_number": 4023,
+          "run_started_at": "2026-10-23T15:16:44Z",
+          "status": "completed",
+          "updated_at": "2026-10-23T15:48:20Z",
+          "workflow_id": 95629690
+        },
+        {
+          "conclusion": "success",
+          "created_at": "2026-10-23T15:16:44Z",
+          "event": "pull_request",
+          "head_branch": "feat/probe-intent-extraction",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "html_url": "https://github.com/NVIDIA/garak/actions/runs/39976890427",
+          "id": 39976890427,
+          "name": "Garak pytest - Linux",
+          "node_id": "WFR_kwLOJhfZ-s8AAAAJTs7wOw",
+          "path": ".github/workflows/test_linux.yml",
+          "run_attempt": 2,
+          "run_number": 4018,
+          "run_started_at": "2026-10-23T17:25:28Z",
+          "status": "completed",
+          "updated_at": "2026-10-23T17:56:23Z",
+          "workflow_id": 107904213
+        },
+        {
+          "conclusion": "success",
+          "created_at": "2026-10-23T15:16:44Z",
+          "event": "pull_request",
+          "head_branch": "feat/probe-intent-extraction",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "html_url": "https://github.com/NVIDIA/garak/actions/runs/39976890337",
+          "id": 39976890337,
+          "name": "Garak pytest - Windows",
+          "node_id": "WFR_kwLOJhfZ-s8AAAAJTs7v4Q",
+          "path": ".github/workflows/test_windows.yml",
+          "run_attempt": 1,
+          "run_number": 4022,
+          "run_started_at": "2026-10-23T15:16:44Z",
+          "status": "completed",
+          "updated_at": "2026-10-23T15:59:31Z",
+          "workflow_id": 95570119
+        }
+      ]
+    },
+    "repos/NVIDIA/garak/commits/343fba1a0a885e7f95f0ab330a8cb22bb7287e5d/check-runs": {
+      "check_runs": [
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-23T17:51:30Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/NVIDIA/garak/actions/runs/39998500346/job/120568178235",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120568178235,
+          "name": "handle-labels",
+          "started_at": "2026-10-23T17:51:27Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-23T15:44:27Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/NVIDIA/garak/actions/runs/39976890427/job/120555906850",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120555906850,
+          "name": "build (ubuntu-24.04-arm, 3.11)",
+          "started_at": "2026-10-23T15:16:47Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-23T17:55:48Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/NVIDIA/garak/actions/runs/39976890427/job/120555904749",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120555904749,
+          "name": "build (ubuntu-24.04-arm, 3.13)",
+          "started_at": "2026-10-23T17:26:06Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-23T17:55:56Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/NVIDIA/garak/actions/runs/39976890427/job/120555904630",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120555904630,
+          "name": "build (ubuntu-latest, 3.11)",
+          "started_at": "2026-10-23T17:25:59Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-23T17:56:23Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/NVIDIA/garak/actions/runs/39976890427/job/120555904591",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120555904591,
+          "name": "build (ubuntu-latest, 3.13)",
+          "started_at": "2026-10-23T17:26:01Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-23T17:55:57Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/NVIDIA/garak/actions/runs/39976890427/job/120555904553",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120555904553,
+          "name": "build (ubuntu-24.04-arm, 3.14)",
+          "started_at": "2026-10-23T17:26:09Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-23T17:52:39Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/NVIDIA/garak/actions/runs/39976890427/job/120555904547",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120555904547,
+          "name": "build (ubuntu-24.04-arm, 3.12)",
+          "started_at": "2026-10-23T17:25:52Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-23T17:56:05Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/NVIDIA/garak/actions/runs/39976890427/job/120555904498",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120555904498,
+          "name": "build (ubuntu-latest, 3.12)",
+          "started_at": "2026-10-23T17:25:46Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-23T17:54:01Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/NVIDIA/garak/actions/runs/39976890427/job/120555904184",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120555904184,
+          "name": "build (ubuntu-latest, 3.14)",
+          "started_at": "2026-10-23T17:25:56Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-23T15:18:58Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/NVIDIA/garak/actions/runs/39976890274/job/120493710210",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120493710210,
+          "name": "build (3.13)",
+          "started_at": "2026-10-23T15:16:47Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-23T15:18:56Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/NVIDIA/garak/actions/runs/39976890274/job/120493710123",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120493710123,
+          "name": "build (3.12)",
+          "started_at": "2026-10-23T15:16:47Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-23T15:19:10Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/NVIDIA/garak/actions/runs/39976890274/job/120493710114",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120493710114,
+          "name": "build (3.14)",
+          "started_at": "2026-10-23T15:16:47Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-23T15:59:31Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/NVIDIA/garak/actions/runs/39976890337/job/120493709867",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120493709867,
+          "name": "build_windows (3.12)",
+          "started_at": "2026-10-23T15:16:47Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-23T15:54:11Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/NVIDIA/garak/actions/runs/39976890337/job/120493709796",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120493709796,
+          "name": "build_windows (3.11)",
+          "started_at": "2026-10-23T15:16:47Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-23T15:46:14Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/NVIDIA/garak/actions/runs/39976890343/job/120493709778",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120493709778,
+          "name": "build_macos (3.12)",
+          "started_at": "2026-10-23T15:16:46Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-23T15:52:02Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/NVIDIA/garak/actions/runs/39976890337/job/120493709761",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120493709761,
+          "name": "build_windows (3.13)",
+          "started_at": "2026-10-23T15:16:47Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-23T15:19:04Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/NVIDIA/garak/actions/runs/39976890274/job/120493709754",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120493709754,
+          "name": "build (3.11)",
+          "started_at": "2026-10-23T15:16:47Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-23T15:48:20Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/NVIDIA/garak/actions/runs/39976890343/job/120493709641",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120493709641,
+          "name": "build_macos (3.13)",
+          "started_at": "2026-10-23T15:16:47Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-23T15:19:38Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/NVIDIA/garak/actions/runs/39976890305/job/120493709593",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120493709593,
+          "name": "docs",
+          "started_at": "2026-10-23T15:16:47Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-23T15:36:14Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/NVIDIA/garak/actions/runs/39976890343/job/120493709466",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120493709466,
+          "name": "build_macos (3.11)",
+          "started_at": "2026-10-23T15:16:46Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-23T15:43:09Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/NVIDIA/garak/actions/runs/39976890337/job/120493709374",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120493709374,
+          "name": "build_windows (3.14)",
+          "started_at": "2026-10-23T15:16:46Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "name": "GitHub Actions"
+          },
+          "completed_at": "2026-10-23T15:45:53Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/NVIDIA/garak/actions/runs/39976890343/job/120493709229",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120493709229,
+          "name": "build_macos (3.14)",
+          "started_at": "2026-10-23T15:16:47Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "name": "DCO"
+          },
+          "completed_at": "2026-10-23T15:16:41Z",
+          "conclusion": "success",
+          "details_url": "https://probot.github.io/apps/dco/",
+          "head_sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d",
+          "id": 120493687100,
+          "name": "DCO",
+          "started_at": "2026-10-23T15:16:40Z",
+          "status": "completed"
+        }
+      ],
+      "total_count": 23
+    },
+    "repos/NVIDIA/garak/pulls/2358": {
+      "base": {
+        "ref": "main"
+      },
+      "draft": false,
+      "head": {
+        "ref": "feat/probe-intent-extraction",
+        "sha": "343fba1a0a885e7f95f0ab330a8cb22bb7287e5d"
+      },
+      "html_url": "https://github.com/NVIDIA/garak/pull/2358",
+      "mergeable": true,
+      "mergeable_state": "clean",
+      "number": 2358,
+      "state": "closed",
+      "title": "feat(cas): extract probe intents into reusable stubs",
+      "user": {
+        "login": "patriciapampanelli"
+      }
+    }
+  }
+}

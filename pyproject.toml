@@ -1,0 +1,74 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gh-ci-truth"
+version = "0.1.0"
+description = "Tell whether a pull request's CI actually ran, instead of whether its checks panel looks clean."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Manu Nicholas Jacob", email = "manunicholasjacob@gmail.com" },
+]
+maintainers = [
+    { name = "Manu Nicholas Jacob", email = "manunicholasjacob@gmail.com" },
+]
+keywords = [
+    "github",
+    "github-actions",
+    "continuous-integration",
+    "pull-request",
+    "ci",
+    "gh-extension",
+    "open-source-maintenance",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Version Control :: Git",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=7.0"]
+dev = ["pytest>=7.0", "build>=1.0", "twine>=5.0"]
+
+[project.urls]
+Homepage = "https://github.com/manunicholasjacob/gh-ci-truth"
+Source = "https://github.com/manunicholasjacob/gh-ci-truth"
+Issues = "https://github.com/manunicholasjacob/gh-ci-truth/issues"
+Changelog = "https://github.com/manunicholasjacob/gh-ci-truth/blob/main/CHANGELOG.md"
+
+[project.scripts]
+gh-ci-truth = "gh_ci_truth.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+gh_ci_truth = ["py.typed"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]
+addopts = "-q --strict-markers"
+filterwarnings = ["error"]

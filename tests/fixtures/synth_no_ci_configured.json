@@ -1,0 +1,43 @@
+{
+  "description": "NO_CI_CONFIGURED. The head commit has no workflow runs and the repository has no workflows at all. This is the state that must be distinguishable from an expired approval, because both leave an empty checks panel.",
+  "provenance": "Synthetic. Field names, types and value vocabulary are copied from the payloads recorded live from NVIDIA/garak on 2026-11-01; the values are invented because no public example of this state was to hand. Nothing here is presented as an observation.",
+  "responses": {
+    "repos/example-org/example-repo/actions/runs?head_sha=bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb": {
+      "total_count": 0,
+      "workflow_runs": []
+    },
+    "repos/example-org/example-repo/actions/workflows": {
+      "total_count": 0,
+      "workflows": []
+    },
+    "repos/example-org/example-repo/commits/bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb/check-runs": {
+      "check_runs": [],
+      "total_count": 0
+    },
+    "repos/example-org/example-repo/pulls/12": {
+      "base": {
+        "ref": "main"
+      },
+      "draft": false,
+      "head": {
+        "ref": "feature-branch",
+        "sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "html_url": "https://github.com/example-org/example-repo/pull/12",
+      "number": 12,
+      "state": "open",
+      "title": "a change to a repository with no CI",
+      "user": {
+        "login": "example-contributor"
+      }
+    },
+    "repos/example-org/example-repo/pulls/12/commits": [
+      {
+        "commit": {
+          "message": "the only commit"
+        },
+        "sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      }
+    ]
+  }
+}

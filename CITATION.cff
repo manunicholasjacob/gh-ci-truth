@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "gh-ci-truth: classify whether a pull request's CI actually ran"
+abstract: >-
+  A gh CLI extension, Python library and GitHub Action that distinguish a
+  pull request whose checks passed from one whose workflow runs were never
+  approved or whose approval expired. GitHub reports check runs attached to
+  the head commit, and an unapproved or expired workflow run executes no job
+  and so attaches no check run, which makes an untested pull request render
+  as a clean one.
+type: software
+version: 0.1.0
+date-released: "2026-11-01"
+license: MIT
+repository-code: "https://github.com/manunicholasjacob/gh-ci-truth"
+url: "https://github.com/manunicholasjacob/gh-ci-truth"
+authors:
+  - family-names: "Jacob"
+    given-names: "Manu Nicholas"
+    orcid: "https://orcid.org/0009-0007-6589-6572"
+    affiliation: "Independent Researcher"
+keywords:
+  - "github actions"
+  - "continuous integration"
+  - "pull requests"
+  - "open source maintenance"
+  - "software supply chain"

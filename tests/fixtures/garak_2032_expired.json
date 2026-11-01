@@ -1,0 +1,158 @@
+{
+  "description": "NEVER_RAN_EXPIRED, second independent instance. Same signature as 2031 on a different head commit.",
+  "provenance": "Recorded from the live GitHub REST API on 2026-11-01 against the public repository NVIDIA/garak. Pull request 2032 was opened by the author of this tool, manunicholasjacob. Payloads trimmed and transcoded to ASCII.",
+  "responses": {
+    "repos/NVIDIA/garak/actions/runs/33132183074/jobs": {
+      "jobs": [],
+      "total_count": 0
+    },
+    "repos/NVIDIA/garak/actions/runs/33132183086/jobs": {
+      "jobs": [],
+      "total_count": 0
+    },
+    "repos/NVIDIA/garak/actions/runs/33132183087/jobs": {
+      "jobs": [],
+      "total_count": 0
+    },
+    "repos/NVIDIA/garak/actions/runs/33132183089/jobs": {
+      "jobs": [],
+      "total_count": 0
+    },
+    "repos/NVIDIA/garak/actions/runs/33132183122/jobs": {
+      "jobs": [],
+      "total_count": 0
+    },
+    "repos/NVIDIA/garak/actions/runs?head_sha=187b4844ebbc683d93829ad6fe54ad06aff31947": {
+      "total_count": 5,
+      "workflow_runs": [
+        {
+          "conclusion": "failure",
+          "created_at": "2026-08-28T01:13:17Z",
+          "event": "pull_request",
+          "head_branch": "fix/lite-hint-dead-guard",
+          "head_sha": "187b4844ebbc683d93829ad6fe54ad06aff31947",
+          "html_url": "https://github.com/NVIDIA/garak/actions/runs/33132183087",
+          "id": 33132183087,
+          "name": "Garak pytest - Linux",
+          "node_id": "WFR_kwLOJhfZ-s8AAAAHttT-Lw",
+          "path": ".github/workflows/test_linux.yml",
+          "run_attempt": 1,
+          "run_number": 3658,
+          "run_started_at": "2026-08-28T01:13:17Z",
+          "status": "completed",
+          "updated_at": "2026-09-27T01:17:20Z",
+          "workflow_id": 107904213
+        },
+        {
+          "conclusion": "failure",
+          "created_at": "2026-08-28T01:13:17Z",
+          "event": "pull_request",
+          "head_branch": "fix/lite-hint-dead-guard",
+          "head_sha": "187b4844ebbc683d93829ad6fe54ad06aff31947",
+          "html_url": "https://github.com/NVIDIA/garak/actions/runs/33132183089",
+          "id": 33132183089,
+          "name": "Garak pip - install from repo",
+          "node_id": "WFR_kwLOJhfZ-s8AAAAHttT-MQ",
+          "path": ".github/workflows/remote_package_install.yml",
+          "run_attempt": 1,
+          "run_number": 3048,
+          "run_started_at": "2026-08-28T01:13:17Z",
+          "status": "completed",
+          "updated_at": "2026-09-27T01:17:20Z",
+          "workflow_id": 127609481
+        },
+        {
+          "conclusion": "failure",
+          "created_at": "2026-08-28T01:13:17Z",
+          "event": "pull_request",
+          "head_branch": "fix/lite-hint-dead-guard",
+          "head_sha": "187b4844ebbc683d93829ad6fe54ad06aff31947",
+          "html_url": "https://github.com/NVIDIA/garak/actions/runs/33132183086",
+          "id": 33132183086,
+          "name": "Documentation build",
+          "node_id": "WFR_kwLOJhfZ-s8AAAAHttT-Lg",
+          "path": ".github/workflows/docs.yml",
+          "run_attempt": 1,
+          "run_number": 846,
+          "run_started_at": "2026-08-28T01:13:17Z",
+          "status": "completed",
+          "updated_at": "2026-09-27T01:17:20Z",
+          "workflow_id": 265472938
+        },
+        {
+          "conclusion": "failure",
+          "created_at": "2026-08-28T01:13:17Z",
+          "event": "pull_request",
+          "head_branch": "fix/lite-hint-dead-guard",
+          "head_sha": "187b4844ebbc683d93829ad6fe54ad06aff31947",
+          "html_url": "https://github.com/NVIDIA/garak/actions/runs/33132183074",
+          "id": 33132183074,
+          "name": "Garak pytest - Windows",
+          "node_id": "WFR_kwLOJhfZ-s8AAAAHttT-Ig",
+          "path": ".github/workflows/test_windows.yml",
+          "run_attempt": 1,
+          "run_number": 3662,
+          "run_started_at": "2026-08-28T01:13:17Z",
+          "status": "completed",
+          "updated_at": "2026-09-27T01:17:20Z",
+          "workflow_id": 95570119
+        },
+        {
+          "conclusion": "failure",
+          "created_at": "2026-08-28T01:13:17Z",
+          "event": "pull_request",
+          "head_branch": "fix/lite-hint-dead-guard",
+          "head_sha": "187b4844ebbc683d93829ad6fe54ad06aff31947",
+          "html_url": "https://github.com/NVIDIA/garak/actions/runs/33132183122",
+          "id": 33132183122,
+          "name": "Garak pytest - MacOS",
+          "node_id": "WFR_kwLOJhfZ-s8AAAAHttT-Ug",
+          "path": ".github/workflows/test_macos.yml",
+          "run_attempt": 1,
+          "run_number": 3663,
+          "run_started_at": "2026-08-28T01:13:17Z",
+          "status": "completed",
+          "updated_at": "2026-09-27T01:17:20Z",
+          "workflow_id": 95629690
+        }
+      ]
+    },
+    "repos/NVIDIA/garak/commits/187b4844ebbc683d93829ad6fe54ad06aff31947/check-runs": {
+      "check_runs": [
+        {
+          "app": {
+            "name": "DCO"
+          },
+          "completed_at": "2026-08-28T01:13:16Z",
+          "conclusion": "success",
+          "details_url": "https://probot.github.io/apps/dco/",
+          "head_sha": "187b4844ebbc683d93829ad6fe54ad06aff31947",
+          "id": 98724001768,
+          "name": "DCO",
+          "started_at": "2026-08-28T01:13:15Z",
+          "status": "completed"
+        }
+      ],
+      "total_count": 1
+    },
+    "repos/NVIDIA/garak/pulls/2032": {
+      "base": {
+        "ref": "main"
+      },
+      "draft": false,
+      "head": {
+        "ref": "fix/lite-hint-dead-guard",
+        "sha": "187b4844ebbc683d93829ad6fe54ad06aff31947"
+      },
+      "html_url": "https://github.com/NVIDIA/garak/pull/2032",
+      "mergeable": true,
+      "mergeable_state": "clean",
+      "number": 2032,
+      "state": "open",
+      "title": "fix: correct the lite-config hint guard and its masked AttributeError",
+      "user": {
+        "login": "manunicholasjacob"
+      }
+    }
+  }
+}

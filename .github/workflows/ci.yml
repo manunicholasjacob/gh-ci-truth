@@ -1,0 +1,145 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: test (${{ matrix.os }}, py${{ matrix.python-version }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ["3.9", "3.12", "3.13"]
+        exclude:
+          # macos-latest runners are arm64 and actions/setup-python
+          # publishes no CPython 3.9 build for darwin-arm64.
+          - os: macos-latest
+            python-version: "3.9"
+        include:
+          - os: macos-13
+            python-version: "3.9"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install
+        run: python -m pip install --upgrade pip && python -m pip install -e ".[test]"
+
+      - name: Test
+        run: python -m pytest
+
+  ascii:
+    name: ascii and hygiene
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Every tracked file must be printable ASCII
+        run: |
+          # No em dashes, en dashes, smart quotes, non-breaking spaces or
+          # tabs anywhere in the repository, in code or in prose. The class
+          # [^ -~] is every byte outside printable ASCII; grep strips the
+          # newline before matching, so only tabs and non-ASCII can hit.
+          # -P is deliberately not used: it is unavailable in some locales.
+          # grep exits 0 on a match, 1 on no match, 2 on an error. An
+          # error must fail the job: a step that cannot read the tree has
+          # not verified it. `if grep` alone would treat 2 as "clean".
+          set +e
+          LC_ALL=C grep -rn '[^ -~]' --exclude-dir=.git .
+          status=$?
+          set -e
+          if [ "$status" -eq 0 ]; then
+            echo "::error::non-ASCII or tab bytes found above"
+            exit 1
+          fi
+          if [ "$status" -ne 1 ]; then
+            echo "::error::grep failed with status $status"
+            exit 1
+          fi
+          echo "all tracked files are printable ASCII"
+
+      - name: The gh extension shim is executable
+        run: test -x ./gh-ci-truth && echo "shim is executable"
+
+  build:
+    name: build the distribution
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build
+        run: |
+          python -m pip install --upgrade pip build twine
+          python -m build
+          python -m twine check dist/*
+
+      - name: The built wheel imports and runs
+        run: |
+          python -m pip install dist/*.whl
+          gh-ci-truth --version
+          python -c "import gh_ci_truth; print(gh_ci_truth.__version__)"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+  action:
+    name: the action runs on itself
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    permissions:
+      contents: read
+      pull-requests: read
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Classify this pull request
+        id: truth
+        uses: ./
+        with:
+          fail-on-untested: "false"
+
+      - name: Report
+        run: |
+          echo "category:  ${{ steps.truth.outputs.category }}"
+          echo "tested:    ${{ steps.truth.outputs.tested }}"
+          echo "jobs run:  ${{ steps.truth.outputs.jobs-executed }}"
+
+      # The step above classifies this pull request, whose own CI is still
+      # running, so it reports UNKNOWN and can never fail. This step is the
+      # one with teeth: the recorded expired cassette must still exit 1
+      # under --strict.
+      - name: The recorded expired cassette still exits non-zero
+        env:
+          PYTHONPATH: src
+        run: |
+          set +e
+          python -m gh_ci_truth 2031 --repo NVIDIA/garak --strict --cassette tests/fixtures/garak_2031_expired.json
+          status=$?
+          set -e
+          if [ "$status" -ne 1 ]; then
+            echo "::error::expected exit 1 under --strict, got $status"
+            exit 1
+          fi
+          echo "strict mode correctly reported the untested pull request"
