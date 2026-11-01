@@ -27,8 +27,15 @@ jobs:
           # publishes no CPython 3.9 build for darwin-arm64.
           - os: macos-latest
             python-version: "3.9"
+          # ubuntu-latest is now Ubuntu 26.04, for which actions/python-versions
+          # publishes no 3.9 build either (only linux-22.04 and linux-24.04).
+          - os: ubuntu-latest
+            python-version: "3.9"
         include:
-          - os: macos-13
+          # macos-13 was retired as a hosted runner, so a job asking for that
+          # label sits queued forever rather than failing. The floor of
+          # requires-python runs on ubuntu-24.04, which does have a 3.9 build.
+          - os: ubuntu-24.04
             python-version: "3.9"
     steps:
       - uses: actions/checkout@v4
