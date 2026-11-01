@@ -31,7 +31,7 @@ jobs:
           - os: macos-13
             python-version: "3.9"
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - uses: actions/setup-python@v5
         with:
@@ -47,7 +47,7 @@ jobs:
     name: ascii and hygiene
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Every tracked file must be printable ASCII
         run: |
@@ -80,7 +80,7 @@ jobs:
     name: build the distribution
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - uses: actions/setup-python@v5
         with:
@@ -112,7 +112,7 @@ jobs:
       pull-requests: read
       actions: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Classify this pull request
         id: truth
