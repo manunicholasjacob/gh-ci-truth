@@ -1,0 +1,17 @@
+# Normalise all text to LF in the repository.
+* text=auto eol=lf
+
+# The gh extension shim is executed by bash. A CRLF checkout breaks it with
+# "bad interpreter" or a stray carriage return in every argument, so its line
+# endings are pinned regardless of the user's core.autocrlf setting.
+gh-ci-truth text eol=lf
+
+# Recorded API cassettes are compared byte for byte by the test suite.
+tests/fixtures/*.json text eol=lf
+
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+*.cff text eol=lf
+LICENSE text eol=lf
