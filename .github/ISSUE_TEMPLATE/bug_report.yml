@@ -1,0 +1,41 @@
+name: Bug report
+description: Something behaved differently from what the documentation says
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. The fields below are what make a report
+        diagnosable without a round trip of questions.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, what you saw, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: The tool's own output
+      description: |
+        The output of `gh ci-truth --repo OWNER/REPO <number> --json`, with anything
+        private redacted. The classification, its confidence and the evidence it
+        rested on are all in there.
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Output of `gh-ci-truth --version`, or the commit you tested.
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Platform
+      description: Operating system, kernel version, and whether this was inside a container or a CI runner.
+    validations:
+      required: true
