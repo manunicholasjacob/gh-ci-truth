@@ -1,5 +1,10 @@
 # gh-ci-truth
 
+[![PyPI](https://img.shields.io/pypi/v/gh-ci-truth)](https://pypi.org/project/gh-ci-truth/)
+[![CI](https://github.com/manunicholasjacob/gh-ci-truth/actions/workflows/ci.yml/badge.svg)](https://github.com/manunicholasjacob/gh-ci-truth/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/pypi/pyversions/gh-ci-truth)](https://pypi.org/project/gh-ci-truth/)
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
 Tell whether a pull request's CI actually ran, instead of whether its checks panel looks clean.
 
 A `gh` CLI extension, an importable Python library, and a GitHub Action, all driven by one classifier.
